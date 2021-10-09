@@ -1,5 +1,6 @@
 import './App.css';
 import Expenses from './components/Expense/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
 
@@ -25,9 +26,13 @@ const App = () => {
     },
   ];
 
+  const submitNewExpense = (expenseData) => {
+    console.log(expenseData);
+  }
+
   return (
     <div>
-      <h2>Let's get started</h2>
+      <NewExpense onSubmit={submitNewExpense}></NewExpense>
       
       <Expenses arr={expenses}></Expenses>
 
