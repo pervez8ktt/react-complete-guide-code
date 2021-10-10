@@ -10,7 +10,7 @@ const ExpenseItem=(props)=> {
     return (
         <Card className="expense-item">
             <ExpenseDate expenseDate={props.expenseDate}></ExpenseDate>
-            <div className="expense-item__description"><h2>{props.title}</h2></div>
+            <div className="expense-item__description"><h2>{props.expenseTitle}</h2></div>
             <Card className="expense-item__price">${props.expenseAmount}</Card>
             {/* <button onClick={()=>{console.log('Clicked!!!')}}>Change Title</button> */}
             

@@ -46,8 +46,9 @@ const submitHandler = (e) => {
 
     const expenseData = {
         title: enteredTitle,
-        amount: enteredAmount,
-        date: new Date(enteredDate)
+        amount: +enteredAmount,
+        date: new Date(enteredDate),
+        id:new Date().getTime()
     };
 
     props.onSubmit({...expenseData, id: Math.random().toString()});
@@ -74,6 +75,8 @@ const submitHandler = (e) => {
             </div>
         </div>
         <div className="new-expense__actions">
+        
+            <button type="submit" onClick={props.onCancel}>Cancel</button>
             <button type="submit">Add Expense</button>
         </div>
     </form>
